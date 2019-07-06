@@ -1,0 +1,8 @@
+
+1. Given the provided data, what are three conclusions we can draw about Kickstarter campaigns?
+There is no direct relation between the amount demanded and the percentage contributed as well as wether or not goals are met
+2. What are some limitations of this dataset?
+
+We dont know if it is representative of what people give since interest and projest varie years to years
+3. What are some other possible tables and/or graphs that we could create?
+Currency and cathegorie (or sub cathegorie)
