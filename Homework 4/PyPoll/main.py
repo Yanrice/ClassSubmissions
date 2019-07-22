@@ -49,4 +49,4 @@ with open(csvpath, newline="") as csvfile:
 # print("Nick is a professional " + title)
 
 # # Convert the integer years into a string and prints
-# print("He has been coding for " 
+# print("He has been coding for " l
