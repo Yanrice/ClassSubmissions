@@ -2,6 +2,10 @@ import os
 import csv
 
 
+
+# opening ressource data
+budget_data_csv = os.path.join("Resources", "budget_data.csv")
+
 # List to store data 
 Profits_losses = []
 Dates = []
@@ -13,17 +17,18 @@ initial_profit = 0
 # Average_change = []
 # Greatest_Increase_profits = []
 # Greatest_Decrease_profits= []
-
-# opening ressource data
-budget_data_csv = os.path.join("Resources", "budget_data.csv")
+# Open and read csv
 with open(budget_data_csv, newline="") as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
-    cvs_header = next(csvreader)
 
+    # Read the header row first (skip this part if there is no header)
+    csv_header = next(csvfile)
+    print(f"Header: {csv_header}")
 
-for row in csvreader:
+    # Read through each row of data after the header
+    for row in csvreader:
   # count number of month 
-  count_budget = count_budget + 1
+    count_budget = count_budget + 1
   # Run through the column
   Profits_losses.append(int(row[1]))
   Dates.append(row[0])
@@ -37,7 +42,7 @@ for row in csvreader:
 
   profit_total_change = profit_total_change + profit_monthly_change
   initial_profit = Final_profit
-Determine the total number of months included in the dataset the total of months 
+  # Determine the total number of months included in the dataset the total of months 
   def average(Dates):
 #     length = len(Dates)
  # Total_months = 0.0

@@ -1,52 +1,65 @@
 import os
 import csv
 
-## List to store data : The dataset is composed of three columns: Voter ID, County, and Candidate
-voter_id = []
-county = []
-candidate = []
-vote = []
-Percentage_vote = []
+
 # opening ressource data
-csvpath = os.path.join("..", "Resources", "election_data.csv")
+csvpath = os.path.join("Resources", "election_data.csv")
 
 # def print_total(election_data_csv):
 #     # For readability, it can help to assign your values to variables with descriptive names
 #     candidate = str(election_data_csv[2])
 #     voter_id = int(election_data_csv[0])
 #     county = str(election_data_csv[1])
-    
+## List to store data : The dataset is composed of three columns: Voter ID, County, and Candidate
+voter_id = []
+candidate_count = 0
+candidates = []
+each_candidate = []
+vote = []
+vote_count = []
+Percentage_vote_perc = []    
 
 # Open and read csv
+# Open and read csv
 with open(csvpath, newline="") as csvfile:
-     # CSV reader specifies delimiter and variable that holds contents
-    csvreader = csv.reader(csvfile, delimiter=',')
+    csvreader = csv.reader(csvfile, delimiter=",")
 
-    print(csvreader)
-        
-        # total of vote in column
+    # Read the header row first (skip this part if there is no header)
+    csv_header = next(csvfile)
+    print(f"Header: {csv_header}")
 
-        # voter_id.append.(column[0])
-        # # Add price
-        # county.append(colum[1])
-        # # Add titlen
-        # candidate.append(column[2])
-        # The total number of votes cast
-    # vote_total = 0.0
-    # for vote in Voter_ID:
-    #     vote_total += Voter_ID
-    # return vote_total / length
+    # Read through each row of data after the header
+    for row in csvreader:
+      # total of vote in column
+        candidate_count = candidate_count + 1
+      # Set candidate name  
+        candidates.append(row[2])
+     # Set voter_id to Voter ID column
+      #voter_id.append.(row[0])
+     # Set county to column County
+        county.append(row[1])
+     # creat a new list for unique candidates
+    for unique in set(candidates)
+        each_candidate.append(unique)   
+        # The total number of vote par candidates
+        total_votes_perc = candidates.count(unique)
+    
+       percentage_vote = (total_votes_perc/candidate_count)*100
+       Percentage_vote_perc.append(percentage_vote)
+    # The winner is 
+       most_vote_count = max(vote_count)
+       most_vote_candidate = each_candidate[vote_count.index(most_vote_count)]
 
-# The percentage of votes each candidate won 2 decimal place
-# percent = round(int(column[1]) /total_number_vote, 2)
-#         review_percent.append(percent)
-
+# Print the election result.
+print("Election Results")   
+print("------------------------------------")
+print("Total Votes :" + str(canditate_count))    
+print("------------------------------------")
 # The total number of votes each candidate won
+for i in range(len(unique_candidate)):
 
-# # The winner of the election based on popular vote.
-# print("Total Votes: " + str(vote_total))
-# # Prints a statement adding the variable
-# print("Nick is a professional " + title)
+         print(each_candidate[i] + ": " + str( Percentage_vote_perc[i]) +"% (" + str(total_votes_perc[i])+ ")")
 
-# # Convert the integer years into a string and prints
-# print("He has been coding for " l
+print("------------------------------------")
+print("Winner: " +  most_vote_candidate)
+print("------------------------------------")
