@@ -1,0 +1,81 @@
+/* Giving the body the specified background color, adding font sizes for the h1 and h3 elements we'll be using */    
+body {
+    background-color: #f1f1f1;
+}
+
+h1 {
+     color: #5191fd;
+     background-color: white;
+     font-family: Arial Verdana;
+     font-weight: bold;
+}
+
+h3 {
+     color: rgb(12, 173, 167);
+     background-color: white;
+     font-family: Arial Verdana;
+     font-weight: bold;
+}
+
+img {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
+p {
+   font-family: sans-serif;
+   font-size: 12
+}
+
+.container {
+  background-color: white;
+}
+
+.navbar {
+         padding-left: 50px;
+}
+
+.navbar-brand {
+               background-color: rgb(223, 124, 165);
+               font-family: Arial Verdana;
+               font-weight: bold;
+               color: white;
+}
+
+/* Here we define a navbar style that will ONLY be applied at screen sizes below 480 pixels */
+@media (max-width: 480px) {
+  .navbar {
+    background-color: rgb(240, 134, 175);
+}
+
+  .navbar-brand {
+                 background-color: white;
+                 font-family: Arial Verdana;
+                 font-weight: bold;
+                 color: rgb(12, 173, 167);
+}
+#nav-select {
+    visibility: hidden;
+  }
+  
+  /* Adding media queries to show the drop-down, and hide the navbar when the screen is smaller than 480 pixels */
+  @media (max-width: 480px) {
+    .navbar li {
+      padding: 10px;
+    }
+  
+    .post {
+      margin-right: 30px;
+      margin-left: 30px;
+    }
+  
+    .navbar ul {
+      visibility: hidden;
+    }
+  
+    #nav-select {
+      visibility: visible;
+    }
+  }

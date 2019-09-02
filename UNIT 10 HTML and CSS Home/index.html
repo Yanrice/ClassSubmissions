@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Homework 10 Web Dashboard</title>
+  <meta content='width=device-width, maximum-scale=1.0, user-scalable=0' name='viewport' />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ 
+  <link rel="stylesheet" href="reset.css">
+   <!--CSS Link-->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+        <a class="navbar-brand" href="index.html">Latitude</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Visualizations <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="latitude_Maxtemps.html">Latitude vs. Max Temperature</a></li>
+              <li><a href="latitude_humidity.html">Latitude vs. Humidity</a></li>
+              <li><a href="latitude_cloudiness.html">Latitude vs. Cloudiness</a></li>
+              <li><a href="latitude_windSpeed.html">Latitude vs. Wind Speed</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="Comparisons.html">Comparisons</a></li>
+             
+            </ul>
+          </li>
+          <li><a href="comparison.html">Comparison</a></li>
+          <li><a href="data.html">Data</a></li>
+          <li><a target="_blank" href="https://github.com/DavisCardwell/api-challenge">Repo</a></li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <!-- Creates the Overall Grid -->
+  <div class="container">
+
+    <div class="row">
+
+        <div class="col-md-6 pad top"> <br>
+          <h3> Weather analysis Latitude</h3> <br>
+        </div>
+
+        <div class="col-md-6 pad top"> <br>
+          <h3>Visualizations</h3> <br>
+        </div>
+
+      </div>
+
+    <div class="row">
+
+        <div class="col-md-6 pad top"> <br>
+
+          <div class="pull-left">
+            <img src="assets/images/output_39_0.png" alt="Latitude vs. Max Temperature" width="200" height="175">
+          </div>
+          <div class="text-left">
+            <p> we created a visualisation dashboard about the weather of more than five hundred cities 
+              across the world of varying distance from the equator (lat_range = (-90, 90), lng_range = (-180, 180)).
+               To accomplish that we utilised python library(https://pypi.python.org/pypi/citipy), API and Json traversals 
+               to collect and analyse data from openweather API (https://openweathermap.org/api).  </p> <br>
+            <p> After creating a representative model of weather across world cities using using a Jupyter notebook,
+               we use Matplotlib, we built a serie of scatter plots to showcasing relationships between latitude and temperature (F),
+                humidity (%), cloudiness (%), wind speed (mph).  </p> <br>
+            
+          </div>
+
+        </div>
+
+</html>        
